@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="springbootdeveloper.controller.BlogApiControllerTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2023-09-19T08:15:39" hostname="psm0506-MacBook-Pro.local" time="0.964">
+  <properties/>
+  <testcase name="findAllArticle : 블로그 글 삭제에 성공한다." classname="springbootdeveloper.controller.BlogApiControllerTest" time="0.634"/>
+  <testcase name="findAllArticle : 블로그 글 조회에 성공한다." classname="springbootdeveloper.controller.BlogApiControllerTest" time="0.163"/>
+  <testcase name="findAllArticle : 블로그 글 목록 조회에 성공한다." classname="springbootdeveloper.controller.BlogApiControllerTest" time="0.038"/>
+  <testcase name="addArticle : 블로그 글 추가에 성공한다." classname="springbootdeveloper.controller.BlogApiControllerTest" time="0.078"/>
+  <testcase name="findAllArticle : 블로그 글 수정에 성공한다." classname="springbootdeveloper.controller.BlogApiControllerTest" time="0.031"/>
+  <system-out><![CDATA[17:15:33.637 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+17:15:33.648 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+17:15:33.698 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [springbootdeveloper.controller.BlogApiControllerTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+17:15:33.709 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [springbootdeveloper.controller.BlogApiControllerTest], using SpringBootContextLoader
+17:15:33.714 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [springbootdeveloper.controller.BlogApiControllerTest]: class path resource [springbootdeveloper/controller/BlogApiControllerTest-context.xml] does not exist
+17:15:33.714 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [springbootdeveloper.controller.BlogApiControllerTest]: class path resource [springbootdeveloper/controller/BlogApiControllerTestContext.groovy] does not exist
+17:15:33.714 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [springbootdeveloper.controller.BlogApiControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+17:15:33.715 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [springbootdeveloper.controller.BlogApiControllerTest]: BlogApiControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+17:15:33.793 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [springbootdeveloper.controller.BlogApiControllerTest]
+17:15:33.901 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/Users/bagsangmug/IdeaProjects/be-psm0506_project/build/classes/java/main/springbootdeveloper/SpringBootDeveloperApplication.class]
+17:15:33.906 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration springbootdeveloper.SpringBootDeveloperApplication for test class springbootdeveloper.controller.BlogApiControllerTest
+17:15:34.012 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [springbootdeveloper.controller.BlogApiControllerTest]: using defaults.
+17:15:34.014 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+17:15:34.029 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@6c8bca63, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2364305a, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@470a696f, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@1bc715b8, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@292d1c71, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2b491fee, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3f1c5af9, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1c55f277, org.springframework.test.context.event.EventPublishingTestExecutionListener@5ddabb18, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@3e8f7922, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@63192798, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@50eca7c6, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@58e6d4b8, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@1de5f0ef, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@376a312c]
+17:15:34.035 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@2c104774 testClass = BlogApiControllerTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@2cb3d0f7 testClass = BlogApiControllerTest, locations = '{}', classes = '{class springbootdeveloper.SpringBootDeveloperApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@4ae9cfc1, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@4b3fa0b3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@5ba88be8, [ImportsContextCustomizer@4e517165 key = [org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.client.servlet.OAuth2ClientAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.resource.servlet.OAuth2ResourceServerAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityFilterAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityConfiguration, org.springframework.boot.test.autoconfigure.web.reactive.WebTestClientAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@6f63b475, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@5bf8fa12, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@72437d8d, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@175b9425], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true]], class annotated with @DirtiesContext [false] with mode [null].
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.6.3)
+
+2023-09-19 17:15:34.566  INFO 86749 --- [    Test worker] s.controller.BlogApiControllerTest       : Starting BlogApiControllerTest using Java 17.0.3 on psm0506-MacBook-Pro.local with PID 86749 (started by bagsangmug in /Users/bagsangmug/IdeaProjects/be-psm0506_project)
+2023-09-19 17:15:34.567  INFO 86749 --- [    Test worker] s.controller.BlogApiControllerTest       : No active profile set, falling back to default profiles: default
+2023-09-19 17:15:35.634  INFO 86749 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-19 17:15:35.698  INFO 86749 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55 ms. Found 1 JPA repository interfaces.
+2023-09-19 17:15:36.612  INFO 86749 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-09-19 17:15:36.757  INFO 86749 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-09-19 17:15:36.883  INFO 86749 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-19 17:15:36.928  INFO 86749 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.4.Final
+2023-09-19 17:15:37.135  INFO 86749 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-09-19 17:15:37.259  INFO 86749 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+Hibernate: 
+    
+    drop table if exists article CASCADE 
+Hibernate: 
+    
+    drop table if exists article_builder CASCADE 
+Hibernate: 
+    
+    drop table if exists article_data CASCADE 
+Hibernate: 
+    
+    drop table if exists article_lombok CASCADE 
+Hibernate: 
+    
+    create table article (
+       id bigint generated by default as identity,
+        content varchar(255) not null,
+        title varchar(255) not null,
+        primary key (id)
+    )
+Hibernate: 
+    
+    create table article_builder (
+       id bigint generated by default as identity,
+        content varchar(255) not null,
+        title varchar(255) not null,
+        primary key (id)
+    )
+Hibernate: 
+    
+    create table article_data (
+       id bigint generated by default as identity,
+        content varchar(255) not null,
+        title varchar(255) not null,
+        primary key (id)
+    )
+Hibernate: 
+    
+    create table article_lombok (
+       id bigint generated by default as identity,
+        content varchar(255) not null,
+        title varchar(255) not null,
+        primary key (id)
+    )
+2023-09-19 17:15:37.825  INFO 86749 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-19 17:15:37.833  INFO 86749 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-19 17:15:38.771  WARN 86749 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-19 17:15:39.296  INFO 86749 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2023-09-19 17:15:39.781  INFO 86749 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-09-19 17:15:39.781  INFO 86749 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-09-19 17:15:39.782  INFO 86749 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2023-09-19 17:15:39.817  INFO 86749 --- [    Test worker] s.controller.BlogApiControllerTest       : Started BlogApiControllerTest in 5.713 seconds (JVM running for 7.402)
+@@@@@BeforeEach
+2023-09-19 17:15:40.141  INFO 86749 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-09-19 17:15:40.141  INFO 86749 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-09-19 17:15:40.143  INFO 86749 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+Hibernate: 
+    select
+        article_lo0_.id as id1_3_,
+        article_lo0_.content as content2_3_,
+        article_lo0_.title as title3_3_ 
+    from
+        article_lombok article_lo0_
+Hibernate: 
+    delete 
+    from
+        article_lombok 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        article_lombok 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        article_lombok 
+    where
+        id=?
+Hibernate: 
+    insert 
+    into
+        article_lombok
+        (id, content, title) 
+    values
+        (null, ?, ?)
+Hibernate: 
+    select
+        article_lo0_.id as id1_3_0_,
+        article_lo0_.content as content2_3_0_,
+        article_lo0_.title as title3_3_0_ 
+    from
+        article_lombok article_lo0_ 
+    where
+        article_lo0_.id=?
+Hibernate: 
+    delete 
+    from
+        article_lombok 
+    where
+        id=?
+Hibernate: 
+    select
+        article_lo0_.id as id1_3_,
+        article_lo0_.content as content2_3_,
+        article_lo0_.title as title3_3_ 
+    from
+        article_lombok article_lo0_
+@@@@@BeforeEach
+2023-09-19 17:15:40.540  INFO 86749 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-09-19 17:15:40.541  INFO 86749 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-09-19 17:15:40.544  INFO 86749 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+Hibernate: 
+    select
+        article_lo0_.id as id1_3_,
+        article_lo0_.content as content2_3_,
+        article_lo0_.title as title3_3_ 
+    from
+        article_lombok article_lo0_
+Hibernate: 
+    insert 
+    into
+        article_lombok
+        (id, content, title) 
+    values
+        (null, ?, ?)
+Hibernate: 
+    select
+        article_lo0_.id as id1_3_0_,
+        article_lo0_.content as content2_3_0_,
+        article_lo0_.title as title3_3_0_ 
+    from
+        article_lombok article_lo0_ 
+    where
+        article_lo0_.id=?
+@@@@@BeforeEach
+2023-09-19 17:15:40.710  INFO 86749 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-09-19 17:15:40.711  INFO 86749 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-09-19 17:15:40.712  INFO 86749 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+Hibernate: 
+    select
+        article_lo0_.id as id1_3_,
+        article_lo0_.content as content2_3_,
+        article_lo0_.title as title3_3_ 
+    from
+        article_lombok article_lo0_
+Hibernate: 
+    delete 
+    from
+        article_lombok 
+    where
+        id=?
+Hibernate: 
+    insert 
+    into
+        article_lombok
+        (id, content, title) 
+    values
+        (null, ?, ?)
+Hibernate: 
+    select
+        article_lo0_.id as id1_3_,
+        article_lo0_.content as content2_3_,
+        article_lo0_.title as title3_3_ 
+    from
+        article_lombok article_lo0_
+@@@@@BeforeEach
+2023-09-19 17:15:40.747  INFO 86749 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-09-19 17:15:40.747  INFO 86749 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-09-19 17:15:40.748  INFO 86749 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+Hibernate: 
+    select
+        article_lo0_.id as id1_3_,
+        article_lo0_.content as content2_3_,
+        article_lo0_.title as title3_3_ 
+    from
+        article_lombok article_lo0_
+Hibernate: 
+    delete 
+    from
+        article_lombok 
+    where
+        id=?
+Hibernate: 
+    insert 
+    into
+        article_lombok
+        (id, content, title) 
+    values
+        (null, ?, ?)
+Hibernate: 
+    select
+        article_lo0_.id as id1_3_,
+        article_lo0_.content as content2_3_,
+        article_lo0_.title as title3_3_ 
+    from
+        article_lombok article_lo0_
+제목 = title
+내용 = content
+article_lombok = Article_lombok(id=null, title=title, content=content)
+article_lombok1 = Article_lombok(id=null, title=null, content=content)
+article_builder = Article_builder(id=null, title=title, content=content)
+article_data = Article_data(id=null, title=title, content=content)
+@@@@@BeforeEach
+2023-09-19 17:15:40.828  INFO 86749 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-09-19 17:15:40.829  INFO 86749 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-09-19 17:15:40.829  INFO 86749 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+Hibernate: 
+    select
+        article_lo0_.id as id1_3_,
+        article_lo0_.content as content2_3_,
+        article_lo0_.title as title3_3_ 
+    from
+        article_lombok article_lo0_
+Hibernate: 
+    delete 
+    from
+        article_lombok 
+    where
+        id=?
+Hibernate: 
+    insert 
+    into
+        article_lombok
+        (id, content, title) 
+    values
+        (null, ?, ?)
+Hibernate: 
+    select
+        article_lo0_.id as id1_3_0_,
+        article_lo0_.content as content2_3_0_,
+        article_lo0_.title as title3_3_0_ 
+    from
+        article_lombok article_lo0_ 
+    where
+        article_lo0_.id=?
+Hibernate: 
+    update
+        article_lombok 
+    set
+        content=?,
+        title=? 
+    where
+        id=?
+Hibernate: 
+    select
+        article_lo0_.id as id1_3_0_,
+        article_lo0_.content as content2_3_0_,
+        article_lo0_.title as title3_3_0_ 
+    from
+        article_lombok article_lo0_ 
+    where
+        article_lo0_.id=?
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
