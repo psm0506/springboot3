@@ -18,7 +18,7 @@ import java.util.List;
 public class BlogApiController {
     private final BlogService blogService;
 
-//    @RequestMapping(value = "/api/articles", method = RequestMethod.POST)
+    //    @RequestMapping(value = "/api/articles", method = RequestMethod.POST)
     // HTTP 메서드가 POST일 때 전달받은 URL과 동일하면 메서드로 매핑
     @PostMapping("/api/articles")
     // @RequestBody로 요청 본문 값 매핑

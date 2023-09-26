@@ -19,6 +19,7 @@ dependencies {
     runtimeOnly 'com.h2database:h2'// 인메모리 데이터베이스
     compileOnly 'org.projectlombok:lombok' //반복 메서드 작성 작업을 줄여주는 라이브러리
     annotationProcessor 'org.projectlombok:lombok'
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 }
 
 test {

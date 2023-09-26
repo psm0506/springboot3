@@ -4,11 +4,16 @@ import com.sun.istack.NotNull;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 
 @Entity // 엔티티로 지정
 @Getter // 모든 필드에 대한 접근자 메서드를 만들 수 있음
+@EntityListeners(AuditingEntityListener.class)
 @NoArgsConstructor(access = AccessLevel.PROTECTED) // 접근 제어자가 protected인 기본 생성자를 생성
 //public으로 할 경우 무분별한 객체 생성이 이루어질 가능성이 있어 체크하기 위함임, 객체 생성시 null값도 들어갈수있어 안정성 떨어짐
 @ToString // 출력시 toString() 메소드를 자동으로 생성(exclude = "pwd") , 객체가 가지고 있는 정보나 값들을 문자열로 만들어 리턴하는 메소스
@@ -26,6 +31,14 @@ public class Article_lombok {
 
     @Column(name = "content", nullable = false)
     private String content;
+
+    @CreatedDate
+    @Column(name = "created_at") // 엔티티가 생성될 때 생성시간 지정
+    private LocalDateTime createdAt;
+
+    @LastModifiedDate
+    @Column(name = "updated_at") // 엔티티가 수정될 때 수정시간 지정
+    private LocalDateTime updatedAt;
 
 //    @CreationTimestamp
 //    @UpdateTimestamp
